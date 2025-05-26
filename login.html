@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нэвтрэх</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="login-page">
+    <div class="login-box">
+      <h1>Нэвтрэх</h1>
+      <p>Судалгаа, явцаа хянахын тулд системд нэвтэрнэ үү</p>
+      <form onsubmit="login(event)">
+        <input type="email" id="email" placeholder="Имэйл хаяг" required />
+        <input type="password" id="password" placeholder="Нууц үг" required />
+        <button type="submit" class="btn">Нэвтрэх</button>
+      </form>
+      <p class="small-text">Шинээр бүртгүүлэх үү? <a href="#">Энд дар</a></p>
+    </div>
+  </section>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (email === "test@example.com" && password === "123456") {
+        alert("Амжилттай нэвтэрлээ!");
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Имэйл эсвэл нууц үг буруу байна.");
+      }
+    }
+  </script>
+</body>
+</html>
